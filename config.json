@@ -22,17 +22,17 @@
   },
   "commandDisabled": [],
   "eventDisabled": [],
-  "OWNER": "Jonell Magallanes",
-  "BOTNAME": "Harold CC",
-  "PREFIX": "/",
+  "OWNER": "JackLxMusician",
+  "BOTNAME": "Happy",
+  "PREFIX": "-",
   "ADMINBOT": [
-    "",
-    ""
+    "61550348197141",
+    "100085008297999"
   ],
   "DESIGN": {
-    "Title": "EDUC",
+    "Title": "HAPPY",
     "Theme": "Flower",
-    "Admin": "Jonell Magallanes",
+    "Admin": "JackLxMusician",
     "Setup": {
       "Info": "Design your own custom terminal Titlebar for the title and must contain no numbers",
       "Theme": "Customize your console effortlessly with various theme colors. Explore Aqua, Fiery, Blue, Orange, Pink, Red, Retro, Sunlight, Teen, Summer, Flower, Ghost, Purple, Rainbow, and Hacker themes to enhance your terminal logs."
