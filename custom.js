@@ -6,12 +6,12 @@ const PREFIX = true;
 
 const randomMessages = [
   "Hello Everyone",
-  "Hello Everyone Kamusta School Niyo?",
+  "Hello Everyone kamusta kayo?",
   "Hello There I'm still alive",
   "Hello Everyone Be Respectful to others Thanks you",
   "How are you today?",
-  "Greetings all to Members",
-  "Hello Educator AI User Remember Don't Spam the Bot"
+  "Hello",
+  "Hello gawa niyo?"
 ];
 
 function randomMessage(array) {
