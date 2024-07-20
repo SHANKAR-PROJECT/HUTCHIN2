@@ -1,55 +1,17 @@
 module.exports.config = {
-	name: "ip",	
-	version: "1.0.0", 
+	name: "setname",
+	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "NTKhang",
-	description: "View your ip information or other ip", 
+	credits: "Mirai Team",
+	description: "setmame [mentioned] [text]",
 	commandCategory: "other",
-	usages: "",
-	cooldowns: 5, 
-	dependencies: "",
+	usages: "[name]",
+	cooldowns: 3
 };
 
-module.exports.run = async function({ api, args, event, __GLOBAL }) {
-  const timeStart = Date.now();
-  
-    const axios = require("axios");
-  if (!args[0]) {api.sendMessage("Please enter the ip you want to check",event.threadID, event.messageID);}
-  else {
-var infoip = (await axios.get(`http://ip-api.com/json/${args.join(' ')}?fields=66846719`)).data;
-       if (infoip.status == 'fail')
-         {api.sendMessage(`Error! An error occurred. Please try again later: ${infoip.message}`, event.threadID, event.messageID)}
-          else {
-            /////////////////
-          //////////////////
- api.sendMessage({body:`======${(Date.now()) - timeStart}ms=====
- 🗺️Continent: ${infoip.continent}
-🏳️Nation: ${infoip.country}
-🎊Country Code: ${infoip.countryCode}
-🕋Area: ${infoip.region}
-⛱️Region/State: ${infoip.regionName}
-🏙️City: ${infoip.city}
-🛣️District: ${infoip.district}
-📮ZIP code: ${infoip.zip}
-🧭Latitude: ${infoip.lat}
-🧭Longitude: ${infoip.lon}
-⏱️Timezone: ${infoip.timezone}
-👨‍✈️Organization Name: ${infoip.org}
-💵Currency unit: ${infoip.currency}
-`,location: {
-				latitude: infoip.lat,
-				longitude: infoip.lon,
-				current: true
-			}}
-,event.threadID, event.messageID);}
-        }
-    
-                  }
-
-  
-  
-  
-  
-  
-  
-  
+module.exports.run = async function({ api, event, args }) {
+	const name = args.join(" ")
+	const mention = Object.keys(event.mentions)[0];
+	if (!mention) return api.changeNickname(`${name}`, event.threadID, event.senderID);
+	if (mention[0]) return api.changeNickname(`${name.replace(event.mentions[mention], "")}`, event.threadID, mention);
+}
