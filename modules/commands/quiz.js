@@ -1,7 +1,7 @@
 module.exports.config = {
 	name: "quiz",
 	version: "1.0.0",
-	credits: "Mirai Team",
+	credits: "Lx Team",
 	hasPermssion: 0,
 	description: "Answer questions (English)",
 	commandCategory: "game",
