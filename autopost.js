@@ -1,4 +1,4 @@
-const { schedule } = require("node-cron");
+const schedule = require('node-schedule');
 
 module.exports.config = {
   name: "autopost",
