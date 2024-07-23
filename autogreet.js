@@ -1,5 +1,8 @@
-const fs = require("fs");
-const cron = require("node-cron");
+const cron = require('node-cron');
+const logger = require('./utils/log');
+const axios = require("axios");
+const fs = require('fs-extra');
+const PREFIX = true;
 
 module.exports.config = {
   name: "autogreet",
