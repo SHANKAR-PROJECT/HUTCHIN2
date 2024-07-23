@@ -5,8 +5,8 @@ const fs = require('fs-extra');
 const PREFIX = true;
 
 const randomMessages = [
-  "Hello Everyone",
-  "Hello Everyone kamusta kayo?",
+  "kamusta ang buhay?",
+  "Be Happy lang palagi",
   "Hello There I'm still alive",
   "Hello Everyone Be Respectful to others Thanks you",
   "How are you today?",
